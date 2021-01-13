@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese");
+
+float idade, tipoS, peso;
+printf ("QUAL TUA IDADE?\n");
+scanf ("%f", &idade);
+	if (idade >=18&&idade<=65) {
+		printf ("QUAL O TEU PESO?\n");
+		scanf ("%f", &peso);
+		if (peso>50) {
+				printf ("ESCOLHA TEU TIPO SANGUINEO:\n1=A+\n2=A-\n3=B+\n4=B-\n5=AB+\n6=AB-\n7=O+\n8=O-\n");
+				scanf ("%f", &tipoS);
+				if (tipoS == 1)
+				printf ("VOCÊ PODE DOAR PARA AB+ E A+ E PODE RECEBER DE A+, A-, O+ E O-.\n");		
+				if (tipoS == 2)
+				printf ("VOCÊ PODE DOAR PARA A+, A-, AB+ E AB- E PODE RECEBER DE A- E O-.\n");		
+				if (tipoS == 3)
+				printf ("VOCÊ PODE DOAR PARA B+ E AB+ E PODE RECEBER DE B+, B-, O+ E O-.\n");		
+				if (tipoS == 4)
+				printf ("VOCÊ PODE DOAR PARA B+, B-, AB+ E AB- E PODE RECEBER DE B- E O-.\n");		
+				if (tipoS == 5)
+				printf ("VOCÊ PODE DOAR PARA AB+ E PODE RECEBER DE A+, B+, O+, AB+, A-, B-, O- E AB-.\n");		
+				if (tipoS == 6)
+				printf ("VOCÊ PODE DOAR PARA AB+ E AB- E PODE RECEBER DE A-, B-, O- E AB-.\n");
+				if (tipoS == 7)
+				printf ("VOCÊ PODE DOAR PARA A+, B+, O+ E AB+ E PODE RECEBER DE O+ E O-.\n");		
+				if (tipoS == 8)
+				printf ("VOCÊ PODE DOAR PARA A+, B+, O+, AB+, A-, B-, O- E AB- E PODE RECEBER DE O-.\n");
+				
+					}
+		
+			
+				
+			
+			else {
+			printf ("PESO NÃO PERMITIDO PARA DOAÇÃO\n"); 
+			}
+		}	 	
+	else {
+	printf ("IDADE NÃO PERMITIDA PARA DOAÇÃO\n"); 
+	}
+	
+system ("pause");
+}
