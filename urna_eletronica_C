@@ -1,0 +1,92 @@
+# include <stdio.h>
+# include <locale.h>
+# include <stdlib.h>
+int douglas=0, wesley=0, luciano=0, nulo=0, branco=0;
+int op;
+
+void votar ();
+void escolha ();
+void relatorio ();
+
+int main (void){
+do { 
+
+	printf ("VOTACAO PARA REPRENSENTANTE DE SALA - TURMA DS2A44.\n");
+	printf ("1=ESCOLHER UM CANDIDATO\n2=VER OS VOTOS\n3=SAIR\nESCOLHA UMA OPCAO:");
+	scanf ("%d",&op);
+	switch (op) {
+		case 1: escolha ();
+		break;
+		
+		case 2: relatorio ();
+		break;
+		
+		case 3: system ("exit");
+		break;
+		
+		default: printf ("OPCAO INVALIDA\n");
+		break;
+		
+	}
+} while (op!=3);
+}
+
+
+void escolha () {
+	int voto;	
+	do {	
+		printf ("ESCOLHA UM CANDIDATO PARA SER O NOVO REPRESENTANTE DA SALA:\n");
+		printf ("10 PARA DOUGLAS SANTANNA\n");
+		printf ("20 PARA WESLEY MARTINS\n");
+		printf ("30 PARA LUCIANO DONIZETI\n");
+		printf ("40 PARA NULO\n");
+		printf ("50 PARA BRANCO\n");
+		scanf ("%d",&voto);
+		if (voto==10) {
+			printf ("VOTOU DOUGLAS\n");
+			scanf ("d",&douglas);
+			douglas++;
+			printf ("DIGITE 1 PARA VOTAR NOVAMENTE OU -1 PARA VOLTAR:\n");
+			scanf ("%d",&op);
+		} if (voto==20) {
+			printf ("VOTOU WESLEY\n");
+			scanf ("d",&wesley);
+			wesley++;
+			printf ("DIGITE 1 PARA VOTAR NOVAMENTE OU -1 PARA VOLTAR:\n");
+			scanf ("%d",&op);
+		}if (voto==30) {
+			printf ("VOTOU LUCIANO\n");
+			scanf ("d",&luciano);
+			luciano++;
+			printf ("DIGITE 1 PARA VOTAR NOVAMENTE OU -1 PARA VOLTAR:\n");
+			scanf ("%d",&op);
+		}if (voto==40) {
+			printf ("VOTO NULO\n");
+			scanf ("d",&nulo);
+			nulo++;
+			printf ("DIGITE 1 PARA VOTAR NOVAMENTE OU -1 PARA VOLTAR:\n");
+			scanf ("%d",&op);
+		} if (voto==50) {
+			printf ("VOTOU EM BRANCO\n");
+			scanf ("d",&branco);
+			branco++;
+			printf ("DIGITE 1 PARA VOTAR NOVAMENTE OU -1 PARA VOLTAR:\n");
+			scanf ("%d",&op);
+		}
+} while (op==1);
+		
+}
+
+
+void relatorio () {
+	
+	do {	
+	printf ("DOUGLAS RECEBEU %d VOTOS\n", douglas);
+	printf ("WESLEY RECEBEU %d VOTOS\n", wesley);
+	printf ("LUCIANO RECEBEU %d VOTOS\n", luciano);
+	printf ("%d PESSOAS VOTARAM NULO\n", nulo);
+	printf ("%d PESSOAS VOTARAM BRANCO\n",branco);
+	printf ("DIGITE -1 PARA VOLTAR\n");
+	scanf ("%d",&op);
+} while (op==1);
+}
