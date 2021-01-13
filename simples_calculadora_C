@@ -1,0 +1,34 @@
+# include <stdio.h>
+# include <locale.h>
+# include <math.h>
+
+int main ()
+
+{
+setlocale (LC_ALL, "Portuguese");
+float  opcao, conta, n1, n2;
+	printf ("ESCOLHA UMA OPÇÃO A SER CALCULADA:\n1=SOMA\n2=MULTIPLICAÇÃO\n3=RAIZ\n4=FINALIZAR\n");
+	scanf ("%f", &opcao);
+		if (opcao==1) {
+			printf ("DIGITE UM NUMERO:\n");
+			scanf ("%f", &n1);
+			printf ("DIGITE OUTRO NUMERO:\n");
+			scanf ("%f", &n2);
+			conta=n1+n2;
+			printf ("RESULTADO DA SOMA ENTRE %0.0f e %0.0f É %0.0f.\n", n1, n2, conta);
+		} if (opcao==2) {
+			printf ("DIGITE UM NUMERO:\n");
+			scanf ("%f", &n1);
+			printf ("DIGITE OUTRO NUMERO:\n");
+			scanf ("%f", &n2);
+			conta=n1*n2;
+			printf ("RESULTADO DA MULTIPLICAÇÃO ENTRE %0.0f e %0.0f É %0.0f.\n\n", n1, n2, conta);
+		} if (opcao==3) {
+			printf ("DIGITE UM NUMERO\n:");
+			scanf ("%f", &n1);
+			printf ("A RAIZ QUADRADA DE %0.0f é %0.3f\n\n", n1, sqrt(n1));
+		} else if (opcao==4) {
+			printf ("FINALIZAR\n");
+		}
+		system ("pause");
+	}
